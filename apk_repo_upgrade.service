@@ -1,0 +1,8 @@
+[Unit]
+Description=Regular apk repo upgrade
+
+[Service]
+User=matthias
+ExecStart=/bin/sh -c "gplaycli -y -u host_home/Software/android/apk/"
+StandardError=journal
+StandardOutput=journal

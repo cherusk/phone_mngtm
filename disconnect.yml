@@ -1,0 +1,4 @@
+---
+
+- name: disconnect (TCP)
+  shell: adb disconnect #{{ device_host_name }}

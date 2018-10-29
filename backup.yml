@@ -1,0 +1,11 @@
+---
+- hosts: all
+  vars_files:
+      - ./cnfg.yml
+  tasks:
+      - include: connect.yml
+
+      - name: perform backup 
+        shell: "{{ adb }} backup \"-all -shared\" -f {{ backup_file }}"
+
+      - include: disconnect.yml

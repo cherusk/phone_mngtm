@@ -1,0 +1,8 @@
+---
+
+- name: resolve dev
+  set_fact: 
+    device_ip: "lookup('dig', device_host_name)"
+
+- name: connect device (TCP)
+  shell: adb connect {{ device_host_name }}

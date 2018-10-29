@@ -1,0 +1,20 @@
+---
+device_host_name: android-7afb6f6bb71
+
+adb: /usr/bin/adb
+adb_sync: /home/matthias/Projects/adb-sync/adb-sync 
+
+apk_repo: /home/matthias/Software/android/apk/
+backup_file: /home/matthias/Software/android/backup.ab
+
+#to_push:
+    #- local_src: 
+      #dev_dst:
+
+to_pull:
+    - dev_src: /sdcard/DCIM/Camera/
+      local_dst: /home/matthias/Pictures/phone/
+
+#to_mirror:
+    #- local_src:
+      #device_dst:

@@ -1,0 +1,9 @@
+[Unit]
+Description=Regular phone data sync 
+
+[Timer]
+OnUnitActiveSec=1w 
+OnBootSec=10min
+
+[Install]
+WantedBy=timers.target

@@ -1,0 +1,18 @@
+---
+- hosts: all
+  vars_files:
+      - ./cnfg.yml
+  tasks:
+      - include: connect.yml
+
+      - name: accrue apk
+        find: 
+            paths: "{{ apk_repo }}"
+            patterns: "*.apk"
+        register: apks
+
+      - name: do upgrade
+        shell: "{{ adb }} install -r {{ item.path }}"
+        with_items: "{{ apks.files }}"
+
+      - include: disconnect.yml

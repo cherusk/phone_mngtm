@@ -1,0 +1,9 @@
+[Unit]
+Description=Regular apk repo upgrade
+
+[Timer]
+OnUnitActiveSec=6d
+OnBootSec=10min
+
+[Install]
+WantedBy=timers.target

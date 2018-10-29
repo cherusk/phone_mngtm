@@ -1,0 +1,8 @@
+[Unit]
+Description=Regular phone pkg upgrade 
+
+[Service]
+User=matthias
+ExecStart=/bin/sh -c "/usr/bin/ansible-playbook $HOME/Projects/mobile_automation/upgrade.yml -i 'localhost,' -u $USER"
+StandardError=journal
+StandardOutput=journal

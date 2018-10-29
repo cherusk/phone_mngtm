@@ -1,0 +1,17 @@
+---
+- hosts: all
+  vars_files:
+      - ./cnfg.yml
+  tasks:
+      - include: connect.yml
+
+      #- name: do push
+        #shell: "{{ adb }} 
+      
+      - name: do pull
+        shell: "{{ adb_sync }} -R {{ item.dev_src }} {{ item.local_dst }}"
+        with_items: "{{ to_pull }}" 
+        
+      #- name: do mirror 
+
+      - include: disconnect.yml
