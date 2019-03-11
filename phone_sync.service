@@ -1,8 +1,0 @@
-[Unit]
-Description=Regular phone backup 
-
-[Service]
-User=matthias
-ExecStart=/bin/sh -c "/usr/bin/ansible-playbook $HOME/Projects/mobile_automation/sync.yml -i 'localhost,' -u $USER"
-StandardError=journal
-StandardOutput=journal

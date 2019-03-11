@@ -1,9 +1,0 @@
-[Unit]
-Description=Regular phone pkg upgrade 
-
-[Timer]
-OnUnitActiveSec=2w 
-OnBootSec=10min
-
-[Install]
-WantedBy=timers.target
